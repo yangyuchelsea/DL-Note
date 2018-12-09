@@ -9,6 +9,11 @@ Record personal notes for cs231n
 #### 1. Introduction
   
   * Intro
+  
+  
+  ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/introduction.png
+"Logo Title Text 1")
+
 
   * KNN
 
