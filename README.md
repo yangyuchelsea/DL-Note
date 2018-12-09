@@ -20,7 +20,11 @@ Record personal notes for cs231n
 
   * softmax
 
-#### 3. SGD
+#### 3. Optimation
+  
+  * SGD
+  
+  * learning rate
 
 
 ### Module 2: CNN
