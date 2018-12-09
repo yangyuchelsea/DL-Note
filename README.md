@@ -8,17 +8,17 @@ Record personal notes for cs231n
 
 #### 1. Introduction
 
-⋅⋅* KNN
+  * KNN
 
-⋅⋅* L1 L2 distance
+  * L1 L2 distance
 
-⋅⋅* Cross validation
+  * Cross validation
 
 #### 2. Linear classification
 
-⋅⋅* SVM
+  * SVM
 
-⋅⋅* softmax
+  * softmax
 
 #### 3. SGD
 
