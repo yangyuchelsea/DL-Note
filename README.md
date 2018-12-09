@@ -2,11 +2,13 @@
 
 Record personal notes for cs231n
 
-## Lecture note
+## Mind mapping of lecture
 
 ### Module 1: Neural Networks
 
 #### 1. Introduction
+  
+  * Intro
 
   * KNN
 
