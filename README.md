@@ -6,18 +6,21 @@ Record personal notes for cs231n
 
 ### Module 1: Neural Networks
 
-#### Introduction
+#### 1. Introduction
 
-1. KNN
-2. L1 L2 distance
-3. Cross validation
+⋅⋅* KNN
 
-#### Linear classification
+⋅⋅* L1 L2 distance
 
-1. SVM
-2. softmax
+⋅⋅* Cross validation
 
-#### SGD
+#### 2. Linear classification
+
+⋅⋅* SVM
+
+⋅⋅* softmax
+
+#### 3. SGD
 
 
 ### Module 2: CNN
