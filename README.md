@@ -1,11 +1,28 @@
-# CS231n Note
+## CS231n Note
 
-Personal understanding of cs231n
+Record personal notes for cs231n
 
-## Getting Started
+## Lecture note
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Module 1: Neural Networks
 
+#### Introduction
+
+1. KNN
+2. L1 L2 distance
+3. Cross validation
+
+#### Linear classification
+
+1. SVM
+2. softmax
+
+#### SGD
+
+
+### Module 2: CNN
+
+## Assignemnt comment and solution
 
 
 [Assignment 1 comment](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/readme.md)
