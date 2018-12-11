@@ -2,17 +2,16 @@
 
 Record personal notes for cs231n
 
-## Mind mapping of lecture
+## Contents of lecture
 
 ### Module 1: Neural Networks
 
-#### 1. Introduction
+#### 1. [Introduction](https://github.com/yangyuchelsea/cs231n-note/blob/master/notes/Module-1/image-classification.md)
   
   * Intro
   
   * KNN and cross validation
   
-  [note](https://github.com/yangyuchelsea/cs231n-note/blob/master/notes/Module-1/image-classification.md)
 
 #### 2. Linear classification
 
