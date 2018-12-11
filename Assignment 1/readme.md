@@ -41,7 +41,7 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
 
    * shape of data: 1,3072
    
-3. compute the l2 distance:
+3. compute the L2 distance:
 
    * what the distance matrix looks like: (500,5000)
    
@@ -78,6 +78,43 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
      
         ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/no-loop.png)
 
+
+
+4. prediction
+   
+   * input: distance matrix and label of training data
+   * hints:
+   
+     1️⃣ [numpy.argsort](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argsort.html): Returns the indices that would sort an array.
+    
+        ```
+        x = np.array([3, 1, 2])
+        >>> np.argsort(x)
+        array([1, 2, 0])
+        ```
+    
+     2️⃣ [numpy.bincount](https://docs.scipy.org/doc/numpy/reference/generated/numpy.bincount.html): Count number of occurrences of each value in array of non-negative ints.
+   
+        ```
+        >>> np.bincount(np.array([0, 1, 1, 3, 2, 1]))
+        array([1, 3, 1, 1, 0, 0, 0])
+        ```
+      
+     3️⃣ [np.argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html): Returns the indices of the maximum values along an axis.
+   
+   * code：
+     for each test sample: 
+       1️⃣ get the label of K nearest neighbors
+       2️⃣ count the frequency of each label(vote) 
+       3️⃣ then select the most frequency one 
+
+        ```
+         for i in range(num_test):
+            closest_y = []
+            closest_y = self.y_train[np.argsort(dists[i])[:k]]
+            y_pred[i] = np.argmax(np.bincount(closest_y)) 
+            
+        ```
 
    
           
