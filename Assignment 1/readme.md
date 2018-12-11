@@ -66,11 +66,11 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
           
         Example from [Docs](https://docs.scipy.org/doc/numpy-1.9.0/reference/generated/numpy.sum.html)
           
-         ```
-          >>> np.sum([[0, 1], [0, 5]], axis=0)
-          array([0, 6])
-          >>> np.sum([[0, 1], [0, 5]], axis=1)
-          array([1, 5])
+        ```
+        >>> np.sum([[0, 1], [0, 5]], axis=0)
+        array([0, 6])
+        >>> np.sum([[0, 1], [0, 5]], axis=1)
+        array([1, 5])
          ```
           
 
