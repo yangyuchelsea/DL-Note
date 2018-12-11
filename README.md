@@ -31,7 +31,9 @@ Record personally notes for cs231n
 ## Personally assignment solution and comment
 
 
-[Assignment 1](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/readme.md)
+[Assignment 1 comment](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/readme.md)
+
+[Assignment 1 solution](https://github.com/yangyuchelsea/cs231n-note/tree/master/Assignment%201/Assignment1-solution)
 
 [Assignment 2](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%202/readme.md)
 
