@@ -28,7 +28,7 @@ Record personally notes for cs231n
 
 ### Module 2: CNN
 
-## Personally assignment solution
+## Personally assignment solution and comment
 
 
 [Assignment 1](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/readme.md)
