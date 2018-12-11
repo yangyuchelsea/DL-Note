@@ -133,10 +133,10 @@ prediction = classifier.predict(test_data, k=k,num_loops = 0)
 
 5. 5-fold cross validation
    
-   * save accuracy in a dictionary, keys are difference choice of k.
+save accuracy in a dictionary, keys are difference choice of k.
    
 
-   1️⃣ split the dataset
+1️⃣ split the dataset
    
   [np.array_split](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_split.html):Split an array into multiple sub-arrays.
    
@@ -145,7 +145,7 @@ prediction = classifier.predict(test_data, k=k,num_loops = 0)
    y_train_folds = np.array_split(y_train, 5) #shape: (5,1000)
    ```
    
-   2️⃣ set dault keys of dictionary(optional):
+2️⃣ set dault keys of dictionary(optional):
    
    ```
     k_to_accuracies = {}
@@ -153,7 +153,7 @@ prediction = classifier.predict(test_data, k=k,num_loops = 0)
       k_to_accuracies.setdefault(k_, [])
    ```
    
-   3️⃣ for each time, select a fold as validation, and train the rest part.
+3️⃣ for each time, select a fold as validation, and train the rest part.
    
    * hint: 
      * [np.vstack](https://docs.scipy.org/doc/numpy/reference/generated/numpy.vstack.html):Stack arrays in sequence vertically (row wise)
@@ -169,13 +169,13 @@ prediction = classifier.predict(test_data, k=k,num_loops = 0)
      ```
     
    
-   4️⃣ calculate the accuracy
+4️⃣ calculate the accuracy
    
    ```
    accuracy = float(np.sum(y_val_pred == y_train_folds[i])) / len(y_val_pred)
    ```
    
-   5️⃣ calcuate the average accuracy for each k_choice and select the best one
+5️⃣ calcuate the average accuracy for each k_choice and select the best one
    
    ```
     average_acc = []
