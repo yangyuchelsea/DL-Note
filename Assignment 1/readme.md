@@ -74,6 +74,9 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
         ```
         
      3️⃣ no loop:
+     
+     
+        ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/no-loop.png)
 
 
    
