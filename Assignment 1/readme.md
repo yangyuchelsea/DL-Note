@@ -34,7 +34,7 @@ plane,car,bird,cat,deer,dog,frog,horse,ship,truck
    
 2. flatten the data:
 
-```python
+```
 X_train = np.reshape(X_train, (X_train.shape[0], -1))
 X_test = np.reshape(X_test, (X_test.shape[0], -1))
 ```
@@ -49,7 +49,7 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
    
      1️⃣ two loops: 
    
-         ```python
+         ```
          for i in range(num_test): #500
             for j in range(num_train): #5000
               dists[i][j] = np.sqrt(np.sum(np.square(X[i] - self.X_train[j])))
@@ -57,7 +57,7 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
        
       2️⃣ one loop:
        
-         ```python
+         ```
          for i in range(num_test): #500
             dists[i] = np.sqrt(np.sum(np.square(X[i] - self.X_train), axis = 1))
          ```
@@ -66,7 +66,7 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
           
         Example from [Docs](https://docs.scipy.org/doc/numpy-1.9.0/reference/generated/numpy.sum.html)
           
-          ```python
+          ```
           >>> np.sum([[0, 1], [0, 5]], axis=0)
           array([0, 6])
           >>> np.sum([[0, 1], [0, 5]], axis=1)
