@@ -40,6 +40,7 @@ Record personally notes for cs231n
 ## Assignment source and references
 
 [CS231n assignment 2017](http://cs231n.github.io)
+
 [assignment solution 2016](https://github.com/lightaime/cs231n)
 
 
