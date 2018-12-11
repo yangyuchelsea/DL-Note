@@ -37,9 +37,10 @@ Record personally notes for cs231n
 
 [Assignment 3 comment](https://github.com/yangyuchelsea/cs231n-note/tree/master/Assignment%203/readme.md)
 
-## Assignment source
+## Assignment source and references
 
 [CS231n assignment 2017](http://cs231n.github.io)
+[assignment solution 2016](https://github.com/lightaime/cs231n)
 
 
 ## Authors
