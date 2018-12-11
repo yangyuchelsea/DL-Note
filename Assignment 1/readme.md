@@ -12,17 +12,22 @@
 * 10 classes:
 plane,car,bird,cat,deer,dog,frog,horse,ship,truck
 
-
+![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/data-eg.png)
 
 
 ## To do list
 
 ### Q1: KNN
 
-Need to modify: 
+#### Need to modify: 
 
 * knn.ipynb 
 * k_nearest_neighbor.py
+
+
+#### Processing:
+
+1. reshape 
 
 ### Q2: SVM
 
