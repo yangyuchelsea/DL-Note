@@ -1,3 +1,4 @@
 # Assignment 1
 
-[contents for code folds](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/assignment%201.png)
+## Content for code folds
+![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/assignment%201.png)
