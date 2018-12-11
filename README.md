@@ -11,15 +11,12 @@ Record personal notes for cs231n
   * Intro
   
   
-  ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/introduction.png
-"Logo Title Text 1")
+  ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/introduction.png)
 
 
-  * KNN
+  * KNN and cross validation
 
-  * L1 L2 distance
-
-  * Cross validation
+  ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/knn.png)
 
 #### 2. Linear classification
 
