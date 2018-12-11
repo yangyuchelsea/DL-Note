@@ -11,6 +11,8 @@ Record personal notes for cs231n
   * Intro
   
   * KNN and cross validation
+  
+  [note](https://github.com/yangyuchelsea/cs231n-note/blob/master/notes/Module-1/image-classification.md)
 
 #### 2. Linear classification
 
