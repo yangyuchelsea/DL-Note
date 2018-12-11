@@ -119,11 +119,92 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
             y_pred[i] = np.argmax(np.bincount(closest_y)) 
         ```
 
-Now, we completed k_nearest_neighbor.py
+Now, we completed k_nearest_neighbor.py, see the architecure of the class:
 
+![alt-text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/Class-KNearestNeighbor.png)
+
+* how to use the class:
+
+```
+classifier = KNearestNeighbor()
+classifier.train(training_data, training_label)
+prediction = classifier.predict(test_data, k=k,num_loops = 0)
+```
+
+5. 5-fold cross validation
    
-          
+   * save accuracy in a dictionary, keys are difference choice of k.
 
+   1️⃣split the dataset
+   
+  [np.array_split](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_split.html):Split an array into multiple sub-arrays.
+   
+   ```
+   X_train_folds = np.array_split(X_train, 5) #each fold shape: (1000, 3072), and combine as a list
+   y_train_folds = np.array_split(y_train, 5) #shape: (5,1000)
+   ```
+   
+   2️⃣ set dault keys of dictionary(optional):
+   
+   ```
+    k_to_accuracies = {}
+    for k_ in k_choices:
+      k_to_accuracies.setdefault(k_, [])
+   ```
+   
+   3️⃣ for each time, select a fold as validation, and train the rest part.
+   
+   * hint: 
+     * [np.vstack](https://docs.scipy.org/doc/numpy/reference/generated/numpy.vstack.html):Stack arrays in sequence vertically (row wise)
+     
+     * [np.hstack](https://docs.scipy.org/doc/numpy/reference/generated/numpy.hstack.html#numpy.hstack): column wise
+     * [np.concatenate](https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html): Join a sequence of arrays along an existing axis.axis = 0: column wise
+     
+     
+     ```
+      for i in range(num_folds):
+        X_val_train = np.vstack(X_train_folds[0:i] + X_train_folds[i+1:])
+        y_val_train = np.concatenate(y_train_folds[0:i] + y_train_folds[i+1:]) # or np.hstack
+     ```
+    
+   
+   4️⃣ calculate the accuracy
+   
+   ```
+   accuracy = float(np.sum(y_val_pred == y_train_folds[i])) / len(y_val_pred)
+   ```
+   
+   5️⃣ calcuate the average accuracy for each k_choice and select the best one
+   
+   ```
+    average_acc = []
+    for k in sorted(k_to_accuracies):
+      average_acc.append(np.mean(k_to_accuracies[k])) 
+    best_k = k_choices[np.argmax(average_acc)]
+   ```
+   
+
+### additional: PCA(code from my assignment for COMP5318 in USYD) only use numpy
+
+1. eigenvalue decomposition
+
+* input: training_data and t
+* processing:
+  * normalization
+  * compute the Scatter Matrix
+  * calculate eigenvectors and eigenvalue
+* output: transformed_training_data,and its dimention
+
+2. SVD
+
+* input: training_data and t
+* processing:
+  * normalization
+  * perform Singular Value Decomposition
+* output: transformed_training_data,and its dimention
+
+
+         
 
 ### Q2: SVM
 
