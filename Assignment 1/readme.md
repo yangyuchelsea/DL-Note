@@ -134,8 +134,9 @@ prediction = classifier.predict(test_data, k=k,num_loops = 0)
 5. 5-fold cross validation
    
    * save accuracy in a dictionary, keys are difference choice of k.
+   
 
-   1️⃣split the dataset
+   1️⃣ split the dataset
    
   [np.array_split](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_split.html):Split an array into multiple sub-arrays.
    
@@ -184,7 +185,9 @@ prediction = classifier.predict(test_data, k=k,num_loops = 0)
    ```
    
 
-### additional: PCA(code from my assignment for COMP5318 in USYD) only use numpy
+### Additional: PCA(code from my assignment for COMP5318 in USYD)
+
+* only use numpy, code in the end of knn.ipynb
 
 1. eigenvalue decomposition
 
