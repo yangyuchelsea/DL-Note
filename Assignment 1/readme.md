@@ -47,7 +47,7 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
    
    * three approaches: 
    
-      1️⃣ two loops: 
+     1️⃣ two loops: 
    
          ```python
          for i in range(num_test): #500
@@ -55,22 +55,23 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
               dists[i][j] = np.sqrt(np.sum(np.square(X[i] - self.X_train[j])))
          ```
        
-       2️⃣ one loop:
+      2️⃣ one loop:
        
          ```python
          for i in range(num_test): #500
             dists[i] = np.sqrt(np.sum(np.square(X[i] - self.X_train), axis = 1))
          ```
          
-          * Why could achieve it: np.sum : sum of array elements over a given axis, axis = 1: sum of row
+        📎 Why could achieve it: np.sum : sum of array elements over a given axis, axis = 1: sum of row
           
-             Example from [Docs](https://docs.scipy.org/doc/numpy-1.9.0/reference/generated/numpy.sum.html)
-              ```python
-              >>> np.sum([[0, 1], [0, 5]], axis=0)
-              array([0, 6])
-              >>> np.sum([[0, 1], [0, 5]], axis=1)
-              array([1, 5])
-              ```
+        Example from [Docs](https://docs.scipy.org/doc/numpy-1.9.0/reference/generated/numpy.sum.html)
+          
+          ```python
+          >>> np.sum([[0, 1], [0, 5]], axis=0)
+          array([0, 6])
+          >>> np.sum([[0, 1], [0, 5]], axis=1)
+          array([1, 5])
+          ```
           
 
 
