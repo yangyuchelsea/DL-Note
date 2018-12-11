@@ -1,6 +1,6 @@
 ## CS231n Note
 
-Record personal notes for cs231n
+Record personally notes for cs231n
 
 ## Contents of lecture
 
@@ -28,7 +28,7 @@ Record personal notes for cs231n
 
 ### Module 2: CNN
 
-## Assignemnt comment and solution
+## Personally assignment solution
 
 
 [Assignment 1 comment](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/readme.md)
@@ -44,5 +44,5 @@ Record personal notes for cs231n
 
 ## Authors
 
-* **Chelsea Yang** 
+**Chelsea Yang** 
 
