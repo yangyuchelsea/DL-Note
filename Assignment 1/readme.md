@@ -119,6 +119,8 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
             y_pred[i] = np.argmax(np.bincount(closest_y)) 
         ```
 
+Now, we completed k_nearest_neighbor.py
+
    
           
 
