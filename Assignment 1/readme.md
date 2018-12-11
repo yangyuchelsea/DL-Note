@@ -3,6 +3,17 @@
 ## Content for code folds
 ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Assignment%201/assignment%201.png)
 
+## Dataset: CIFAR10
+
+* 50,000 training data
+* 10,000 test data
+* shape of data: 32,32,3
+
+* 10 classes:
+plane,car,bird,cat,deer,dog,frog,horse,ship,truck
+
+
+
 
 ## To do list
 
