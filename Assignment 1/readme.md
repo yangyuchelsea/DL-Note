@@ -103,9 +103,13 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
      3️⃣ [np.argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html): Returns the indices of the maximum values along an axis.
    
    * code：
+   
      for each test sample: 
+     
        1️⃣ get the label of K nearest neighbors
+       
        2️⃣ count the frequency of each label(vote) 
+       
        3️⃣ then select the most frequency one 
 
         ```
@@ -113,7 +117,6 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
             closest_y = []
             closest_y = self.y_train[np.argsort(dists[i])[:k]]
             y_pred[i] = np.argmax(np.bincount(closest_y)) 
-            
         ```
 
    
