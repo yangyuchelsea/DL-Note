@@ -4,9 +4,9 @@ Record personally notes for cs231n
 
 ## Contents of lecture
 
-### Module 1: Neural Networks
+### Module 1: [Neural Networks](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/notes.md)
 
-#### 1. [Introduction](https://github.com/yangyuchelsea/cs231n-note/blob/master/notes/Module-1/image-classification.md)
+#### 1. Introduction
   
   * Intro
   
