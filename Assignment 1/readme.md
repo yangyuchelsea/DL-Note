@@ -55,7 +55,7 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
             dists[i][j] = np.sqrt(np.sum(np.square(X[i] - self.X_train[j])))
        ```
        
-      2️⃣ one loop:
+     2️⃣ one loop:
        
        ```
         for i in range(num_test): #500
@@ -71,7 +71,12 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
         array([0, 6])
         >>> np.sum([[0, 1], [0, 5]], axis=1)
         array([1, 5])
-         ```
+        ```
+        
+     3️⃣ no loop:
+
+
+   
           
 
 
