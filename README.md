@@ -24,9 +24,32 @@ Record personally notes for cs231n
   * SGD
   
   * learning rate
+  
+#### 4. Backpropagation
+
+
+#### 5. NN I
+
+#### 6. NN II: 
+
+  * prepocessing
+  
+  * intialization
+ 
+ 
+#### 7. NN III: evaluation
+
+#### 8. Case study
 
 
 ### Module 2: CNN
+
+#### 1. Architectures
+
+#### 2.
+
+#### 3. Transfer learning
+
 
 ## Personally assignment solution and comment
 
