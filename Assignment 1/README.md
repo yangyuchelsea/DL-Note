@@ -214,6 +214,53 @@ save accuracy in a dictionary, keys are difference choice of k.
 Need to modify: 
 
 * svm.ipynb 
+* linear_svm.py
+* gradient_check.py
+
+#### processing
+
+1. subsample the data for this part:
+
+   * 49000 training data
+   * 1000 validation data
+   * 1000 test data
+   
+   
+   [np.random.choice](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.choice.html): Generates a random sample from a given 1-D array
+   
+    ```
+    Generate a uniform random sample from np.arange(5) of size 3 without replacement:
+    >>> np.random.choice(5, 3, replace=False)
+    array([3,1,0])
+    ```
+2. flatten the data:
+
+```
+X_train = np.reshape(X_train, (X_train.shape[0], -1))
+X_test = np.reshape(X_test, (X_test.shape[0], -1))
+```
+
+   * shape of data: 1,3072
+   
+3. Preprocessing: normalization
+
+  * (1) compute the image mean based on the training data
+    ```
+    mean_image = np.mean(X_train, axis=0)
+    ```
+    
+  * (2) subtract the mean image from train and test data
+     ```
+     X_train -= mean_image
+     ```
+  * (3) append the bias dimension of ones (i.e. bias trick) so that our SVM
+     ```
+     X_train = np.hstack([X_train, np.ones((X_train.shape[0], 1))])
+     ```
+     
+     * shape of data: 1,3073
+  
+4. 
 
 ### Q3: Softmax 
 
