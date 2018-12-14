@@ -381,6 +381,28 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
 Need to modify: 
 
 * softmax.ipynb 
+* softmax.py
+
+
+#### Calculate loss function(2 approaches):
+1️⃣ softmax_loss_naive
+
+  * (1) Initialize the loss and gradient to zero.
+     * hint: [np.zeros_like](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros_like.html): Return an array of zeros with the same shape and type as a given array.
+  * (2) score - max(score)
+  * (3) exp
+  * (4) exp/ sum(exp)
+  
+  * [softmax loss](https://medium.com/@liangjinzhenggoon/the-difference-between-softmax-and-softmax-loss-173d385120c2)
+  
+  * softmax + regularization
+  
+2️⃣ softmax_loss_vectorized
+
+
+#### Softmax(use Softmax classifier)
+  * same with SVM
+
 
 ### Q4: Two-Layer Neural Network
 
