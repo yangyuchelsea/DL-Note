@@ -1,6 +1,4 @@
-# Image classification
- 
-## Mind mapping
+# Module 1 Note and Mind mapping
 
 ### 1. Image clssification
   
