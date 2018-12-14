@@ -18,3 +18,7 @@
   
 
 ### 2. Linear classification
+
+![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/linear_classification.png)
+
+
