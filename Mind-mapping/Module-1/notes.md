@@ -21,4 +21,6 @@
 
 ![alt text](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/linear_classification.png)
 
+   * [SVM vs. Softmax example code](https://github.com/yangyuchelsea/cs231n-note/blob/master/Mind-mapping/Module-1/linear_classification_example.ipynb)
+
 
