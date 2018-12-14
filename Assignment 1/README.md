@@ -260,7 +260,121 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
      
      * shape of data: 1,3073
   
-4. 
+4. Loss function(two approaches: we completed linear_svm.py)
+
+* Inputs:
+  - W: A numpy array of shape (D, C) containing weights. (3073,10)
+  - X: A numpy array of shape (N, D) containing a minibatch of data. (49000,3073)
+  - y: A numpy array of shape (N,) containing training labels; y[i] = c means (49000,1)
+    that X[i] has label c, where 0 <= c < C.
+  - reg: (float) regularization strength
+
+* Returns
+  - loss as single float
+  - gradient with respect to weights W (an array of same shape as W)
+
+1️⃣ svm loss naive
+
+  * initialize the gradient as zero
+  * compute the loss and the gradient
+  
+    ```
+      loss = 0.0
+      for i in range(num_train):
+      scores = X[i] @ W
+      for j in range(num_classes):
+        if j != y[i]:
+          margin = np.maximum(0, scores[j] - scores[y[i]] + delta)
+          dW[:,j] += X[i].T
+        loss += margin
+     ```
+
+    [Great interprate of gradient](https://mlxai.github.io/2017/01/06/vectorized-implementation-of-svm-loss-and-gradient-update.html)
+    
+  
+  * average
+  * add regularization to the loss
+  
+  ```
+  loss += reg * np.sum(W * W)
+  dW += reg * W
+  ```
+ 
+
+2️⃣ svm loss vectorized(better)
+
+   * different with 1️⃣:
+      * correct class scores
+      ```
+      correct_class_scores = scores[range(num_train), list(y)].reshape(-1,1) #(N, 1)
+      ```
+      * margin
+      ```
+      margins[range(num_train), list(y)] = 0
+      ```
+      
+      * loss
+      ```
+      np.sum(margins)
+      ```
+      
+      
+5. LinearSVM( use SVM classifier)
+
+  * Classes and Inheritance: [liaoxuefeng](https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820044406b227b3e751cc4d5190420d17a2dc6353000)
+
+  ```
+  class LinearSVM(LinearClassifier):
+  """ A subclass that uses the Multiclass SVM loss function """
+
+  def loss(self, X_batch, y_batch, reg):
+    return svm_loss_vectorized(self.W, X_batch, y_batch, reg)
+  ```
+  
+  * how to use the Class
+  
+  ```
+    # training part
+    for rs in regularization_strengths:
+      for lr in learning_rates:
+          svm = LinearSVM()
+          loss_hist = svm.train(X_train, y_train, lr, rs, num_iters=3000)
+          y_train_pred = svm.predict(X_train)
+          train_accuracy = np.mean(y_train == y_train_pred)
+          y_val_pred = svm.predict(X_val)
+          val_accuracy = np.mean(y_val == y_val_pred)
+
+          if val_accuracy > best_val:
+              best_val = val_accuracy
+              best_svm = svm           
+
+    # Evaluate the best svm on test set
+    y_test_pred = best_svm.predict(X_test)
+    test_accuracy = np.mean(y_test == y_test_pred)
+    print('linear SVM on raw pixels final test set accuracy: %f' % test_accuracy)
+    
+    
+    #get the weight of best svm 
+    w = best_svm.W[:-1,:] # strip out the bias
+  ```
+  
+        
+7. Visualize the learned weights for each class
+
+  * hint: 
+    * [numpy.matrix.squeeze](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matrix.squeeze.html): return a possibly reshaped matrix
+    * w: (3072, 10) -> reshape: (32, 32, 3, 10)
+    * Rescale the weights to be between 0 and 255
+    ```
+    wimg = 255.0 * (w[:, :, :, i].squeeze() - w_min) / (w_max - w_min)
+    ```
+    
+ * Describe what your visualized SVM weights look like, and offer a brief explanation for why they look they way that they do.
+ 
+    * green part in mind mapping
+    * higher score: weight should be more like to sample
+  
+      
 
 ### Q3: Softmax 
 
