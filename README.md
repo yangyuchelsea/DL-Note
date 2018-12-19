@@ -8,16 +8,16 @@ Record personally notes for cs231n
 
 #### 1. Introduction
   
-  * Intro
+  * KNN 
   
-  * KNN and cross validation
+  * cross validation
   
 
 #### 2. Linear classification
 
-  * SVM
+  * score function: map the raw image pixels to class scores
 
-  * softmax
+  * loss function: how well the induced scores agreed with the ground truth labels(SVM, softmax)
 
 #### 3. Optimation
   
